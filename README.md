@@ -1,11 +1,18 @@
 # Spark Typeclass
 
 ## Cats typeclass instances for Apache Spark
-Currently only contains algebraic typeclass (`Semigroup` / `Monoid`) instances for `DataFrame` and `Dataset`.
-For `RDD` instances, you may wish refer to [Frameless](https://github.com/typelevel/frameless/).
+Currently only contains algebraic (`Semigroup` / `Monoid`) and order typeclass instances for `Column` DataFrame` and `Dataset`.
+For `RDD` typeclass instances, you may wish refer to [Frameless](https://github.com/typelevel/frameless/).
 (We could include them in this project in the future as well.)
 
-## Example
+This project has been compile with Spark 2.4.0 but it should compatible with any Spark 2.x on Scala 2.11.x or 2.12.x.
+
+### SBT Setup
+```scala
+libraryDependencies += "io.github.yangzai" %% "spark-typeclass" % "0.1.0-SNAPSHOT"
+```
+
+### Example
 ```Scala
 import cats.data.NonEmptyList
 import cats.Foldable
