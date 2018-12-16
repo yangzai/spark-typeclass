@@ -1,0 +1,20 @@
+ThisBuild / publishMavenStyle := true
+
+ThisBuild / licenses := Seq("APL2" -> url("http://www.apache.org/licenses/LICENSE-2.0.txt"))
+
+//import xerial.sbt.Sonatype._
+//ThisBuild / sonatypeProjectHosting := ???
+
+//Above did not work so this
+ThisBuild / homepage := Some(url("https://github.com/yangzai/spark-typeclass"))
+ThisBuild / scmInfo := Some(
+  ScmInfo(
+    url("https://github.com/yangzai/spark-typeclass"),
+    "scm:git@github.com:yangzai/spark-typeclass.git"
+  )
+)
+ThisBuild / developers := List(
+  ???
+)
+
+ThisBuild / publishTo := sonatypePublishTo.value
